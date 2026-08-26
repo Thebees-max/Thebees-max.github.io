@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minun Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigaatio -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Koti</a></li>
+                <li><a href="#about" class="nav-link">Minusta</a></li>
+                <li><a href="#skills" class="nav-link">Osaaminen</a></li>
+                <li><a href="#projects" class="nav-link">Projektit</a></li>
+                <li><a href="#contact" class="nav-link">Yhteystiedot</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Esittelyosio (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Profiilikuva" class="profile-pic">
+            <h1>Tervetuloa minun portfolioon!</h1>
+            <p class="tagline">Web-kehittäjä | Suunnittelija | Innovaattori | Työkokemus 2kk </p>
+            <button class="cta-button">Tutustu enemmän</button>
+        </div>
+    </section>
+
+    <!-- Minusta -osio -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Minusta</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Olen Janne Fritsch, olen koodaamisen innoittama ja haluan kokoajan oppia uutta sillä uuden oppiminen on minun urani keskiössä.
+                    </p>
+                    <p>
+                        Vapaa-ajallani olen kiinnostunut harrastuksista, pelaamisesta ja koodauksesta. olen myös kiinnostunut uusista koodaustavoista ja tekniikoista.
+                    </p>
+                </div>
+                <img src="images/about.jpg" alt="Kuva minusta" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Osaaminen -osio -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Osaaminen</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Muut taidot</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Web Design</li>
+                        <li>Testaus</li>
+                        <li>Projektienhallinta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projektit -osio -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projektit</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Chihauha sivusto</h3>
+                    <p>
+                        Täysin toimiva sivusto, joka kertoo chihuista, niiden omistajista ja näyttelyistä.
+                    </p>
+                    <a href="#" class="project-link">Katso projekti → Tulossa pian</a>
+                </div>
+                <div class="project-card">
+                    <h3>Electro finder</h3>
+                    <p>
+                        Sovellus, jolla voit etsiä tietokonekomponentteja, kannettavia tietokoneita ja muita elektroniikkatuotteita. Etsii tuotteen, linkin ja halvimman hinnan, joka päivittyy automaattisesti.
+                    </p>
+                    <a href="#" class="project-link">Katso projekti → Tulossa pian</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeksti tulossa</h3>
+                    <p>
+                       Tähän on tulossa uusin ja työläin projekti, jonka teen. Se on täysin uniikki ja tulee olemaan jotain, mitä en olisi kuvitellut tekeväni.
+                    </p>
+                    <a href="#" class="project-link">Katso projekti → Tulossa pian</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yhteystiedot -osio -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Yhteystiedot</h2>
+            <p class="contact-intro">Ota minuun yhteyttä alla olevien kanavien kautta!</p>
+
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Sinun nimi" required>
+                    <input type="email" placeholder="Sinun sähköposti" required>
+                    <textarea placeholder="Viestisi" rows="6" required></textarea>
+                    <button type="submit" class="submit-button">Lähetä viesti</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>📧 Sähköposti</h4>
+                        <p><a href="Jannefritsch0@gmail.com">Jannefritsch0@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📱 Puhelin</h4>
+                        <p><a href="tel:+358 44 2394712">+358 44 2394712</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🔗 Sosiaalinen media</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Minun Portfolio. Kaikki oikeudet pidätetään.</p>
+            <div class="footer-links">
+                <a href="#home">Takaisin ylös</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
