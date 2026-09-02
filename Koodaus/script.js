@@ -149,6 +149,11 @@ document.querySelectorAll('.category').forEach(button => button.addEventListener
   savedButton.setAttribute('aria-pressed', 'false');
   renderProducts();
 }));
+document.querySelectorAll('[data-search-suggestion]').forEach(button => button.addEventListener('click', () => {
+  searchInput.value = button.dataset.searchSuggestion;
+  searchInput.focus();
+  renderProducts();
+}));
 savedButton.addEventListener('click', () => {
   showSavedOnly = !showSavedOnly;
   savedButton.classList.toggle('is-active', showSavedOnly);
