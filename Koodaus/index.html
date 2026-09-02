@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Electro finder helps you compare laptops, PC components, phones, audio and everyday electronics." />
+  <title>Electro finder — technology, found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Electro finder home">
+      <span class="brand-mark">ef</span>
+      <span>electro<br /><b>finder</b></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#compare">Compare</a>
+      <a href="#guides">Guides</a>
+    </nav>
+    <div class="theme-picker" aria-label="Choose a theme">
+      <button class="theme-button" id="themeButton" type="button" aria-expanded="false" aria-controls="themeMenu"><span class="theme-current"></span> Theme <b>⌄</b></button>
+      <div class="theme-menu" id="themeMenu" hidden>
+        <p>Choose a colour mood</p>
+        <button class="theme-option active" data-theme-choice="midnight" type="button"><span class="theme-swatch midnight"></span><span>Midnight</span><b>✓</b></button>
+        <button class="theme-option" data-theme-choice="cloud" type="button"><span class="theme-swatch cloud"></span><span>Cloud</span><b>✓</b></button>
+        <button class="theme-option" data-theme-choice="ember" type="button"><span class="theme-swatch ember"></span><span>Ember</span><b>✓</b></button>
+        <button class="theme-option" data-theme-choice="forest" type="button"><span class="theme-swatch forest"></span><span>Forest</span><b>✓</b></button>
+        <button class="theme-option" data-theme-choice="sunrise" type="button"><span class="theme-swatch sunrise"></span><span>Sunrise</span><b>✓</b></button>
+        <button class="theme-option" data-theme-choice="berry" type="button"><span class="theme-swatch berry"></span><span>Berry</span><b>✓</b></button>
+      </div>
+    </div>
+    <button class="saved-button" id="savedButton" type="button" aria-label="Show saved products" aria-pressed="false">
+      <span class="saved-dot"></span> Saved <span id="savedCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> The considered tech index</p>
+        <h1>Find the<br /><em>right</em> device.</h1>
+        <p class="hero-intro">Laptops, PC parts and everyday electronics, compared clearly. Find the right gear without the noise.</p>
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Try “gaming laptop” or “under €300”" aria-label="Search products by name, type, or budget" />
+          <kbd>⌘ K</kbd>
+        </div>
+        <div class="signal-rail" aria-label="Electro finder status">
+          <span><b>106</b> finds indexed</span><span><b>04</b> categories</span><span><i></i> updated today</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Featured product: MacBook Air M3 laptop">
+        <div class="art-note">01 / FEATURED FIND</div>
+        <div class="featured-device"><span>MACBOOK</span><strong>M3</strong><small>13-inch · 16 GB RAM · 512 GB SSD</small></div>
+        <div class="art-caption"><span>MacBook Air M3</span><b>€1,199</b></div>
+      </div>
+    </section>
+
+    <section class="finder-section" id="compare">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Browse the index</p>
+          <h2>What are you<br />looking for?</h2>
+        </div>
+        <p class="section-aside">Personal tech, properly<br />sorted by people who care.</p>
+      </div>
+      <div class="category-row" role="list" aria-label="Product categories">
+        <button class="category active" data-category="All" role="listitem"><span class="category-icon">✦</span> All finds <small data-count-category="All">106</small></button>
+        <button class="category" data-category="Laptops" role="listitem"><span class="category-icon">▱</span> Laptops <small data-count-category="Laptops">2</small></button>
+        <button class="category" data-category="PC Components" role="listitem"><span class="category-icon">⌗</span> PC components <small data-count-category="PC Components">100</small></button>
+        <button class="category" data-category="Phones & Tablets" role="listitem"><span class="category-icon">▯</span> Phones & tablets <small data-count-category="Phones & Tablets">1</small></button>
+        <button class="category" data-category="Audio" role="listitem"><span class="category-icon">◖</span> Audio <small data-count-category="Audio">1</small></button>
+      </div>
+
+      <div class="results-toolbar">
+        <div class="results-summary"><p><strong id="resultCount">106</strong> considered finds</p><span class="live-status"><i></i> Prices checked <b id="lastUpdated">just now</b></span><span class="price-note">Updates twice daily · next <b id="nextUpdated">in 12 hours</b></span></div>
+        <div class="toolbar-actions"><label class="deal-toggle"><input id="dealsOnly" type="checkbox" /> Deals only</label><label>Sort by <select id="sortSelect" aria-label="Sort products"><option value="deal">Best deal</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <div class="product-modal" id="productModal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close product details">×</button>
+        <p class="eyebrow"><span></span> Product details</p>
+        <div class="modal-heading"><div><h2 id="modalTitle"></h2><p id="modalMeta"></p></div><div class="modal-code" id="modalCode"></div></div>
+        <div class="spec-layout"><div><h3>Specifications</h3><ul id="modalSpecs"></ul></div><div><h3>Best current price</h3><div class="modal-price" id="modalPrice"></div><p class="modal-store" id="modalStore"></p><a class="visit-link" id="modalLink" target="_blank" rel="noreferrer">Open product results <span>↗</span></a></div></div>
+        <div class="offer-list"><h3>Compare retailers</h3><div id="modalOffers"></div></div>
+      </section>
+    </div>
+
+    <section class="newsletter" id="guides">
+      <div><p class="eyebrow"><span></span> The weekly shortlist</p><h2>Good tech,<br /><em>once a week.</em></h2></div>
+      <form id="newsletterForm"><label for="email">No deals. Just five genuinely useful finds.</label><div class="email-row"><input id="email" type="email" placeholder="your@email.com" required /><button type="submit">Join the list <span>→</span></button></div><p class="form-message" id="formMessage" role="status"></p></form>
+    </section>
+  </main>
+  <footer><span>© 2024 Electro finder</span><span>Made for the curious <i>✦</i></span><span>Oslo · Helsinki · Everywhere</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
