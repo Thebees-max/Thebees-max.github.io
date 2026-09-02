@@ -13,6 +13,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
 .site-header { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 6vw; color: #f7faff; background: var(--navy); }
 .brand { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-size: 13px; line-height: .9; letter-spacing: -.04em; }
+.brand-button { padding: 7px 10px 7px 7px; border: 1px solid #40516c; border-radius: 7px; background: transparent; transition: border-color .2s, background .2s; }
+.brand-button:hover, .brand-button:focus-visible { border-color: var(--cyan); background: rgba(133, 231, 239, .08); outline: 0; }
 .brand-mark { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 9px; color: var(--navy); background: var(--cyan); font-weight: 800; }
 .brand b { color: var(--cyan); }
 .theme-picker { position: relative; margin-right: 20px; }
@@ -70,7 +72,7 @@ kbd { padding: 4px 6px; color: #a1b2ca; border: 1px solid #5c7190; border-radius
 .signal-rail i { width: 6px; height: 6px; border-radius: 50%; background: #6de0ae; }
 .hero-art { position: relative; min-height: 318px; overflow: hidden; border-radius: 10px; background: #263b59; box-shadow: 0 20px 50px rgba(3, 12, 27, .25); animation: reveal .8s .12s ease both; }
 .hero-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(78,140,255,.2), transparent 58%); pointer-events: none; }
-.featured-device { position: absolute; inset: 25% 16% 24%; display: flex; flex-direction: column; justify-content: center; padding: 25px; border: 1px solid #617b9f; border-radius: 8px; background: linear-gradient(135deg, #223b61, #13233c); box-shadow: 20px 20px 0 #0f1d31, 0 20px 45px rgba(3, 12, 27, .3); }
+.featured-device { position: absolute; inset: 25% 16% 24%; display: flex; flex-direction: column; justify-content: center; padding: 25px; border-left: 2px solid var(--cyan); background: transparent; }
 .featured-device span, .featured-device small { color: var(--cyan); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; }
 .featured-device strong { margin: 8px 0 12px; color: white; font-family: 'Space Grotesk', sans-serif; font-size: clamp(50px, 7vw, 92px); letter-spacing: -.08em; line-height: .8; }
 .featured-device small { color: #aebed2; letter-spacing: .04em; }
